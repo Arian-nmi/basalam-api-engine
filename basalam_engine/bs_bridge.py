@@ -332,7 +332,9 @@ def build_basalam_models_for_shop_item(shop_item_id: int) -> BasalamProduct:
 
         return bp
 
-
+# -------------------------
+# Telegram notifications
+# -------------------------
 def send_basalam_created_notification(bp: BasalamProduct):
     shop_item = bp.shop_item
     print("========= SEND_BASALAM_NOTIFICATION CALLED =========", bp.id)
@@ -350,9 +352,7 @@ def send_basalam_created_notification(bp: BasalamProduct):
             + f"status: fully-added"
     ).start()
 
-# -------------------------
-# Telegram notifications
-# -------------------------
+
 @receiver(post_save, sender=BasalamProduct)
 def update_basalam_product_status(sender, instance, created, **kwargs):
     """
