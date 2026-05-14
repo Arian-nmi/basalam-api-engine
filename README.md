@@ -4,7 +4,7 @@ A scalable backend system for integrating internal shop items with external mark
 
 This project demonstrates how to design and implement a **production-ready asynchronous pipeline** for product creation, transformation, and synchronization across third-party platforms.
 
----
+-----
 
 ## 🧠 Overview
 
